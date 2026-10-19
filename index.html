@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="kk">
+<head>
+ <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <meta name="theme-color" content="#0d0d18" />
+ <meta name="description" content="ROLAB — іс-шараның фото және видео галереясы. Суреттеріңізді бөлісіңіз." />
+ <title>ROLAB — Фото және видео галерея</title>
+ <link rel="icon" href="/rolab-logo.png" />
+</head>
+<body>
+ <header class="topbar"><div class="top-inner">
+  <a class="brand" href="#home" aria-label="ROLAB басты бет"><span class="brand-icon"><img src="/rolab-logo.png" alt="ROLAB" /></span><span>RO<span class="brand-grad">LAB</span><small>MEDIA GALLERY</small></span></a>
+  <nav><a href="#gallery">Галерея</a><a href="#about">Біз туралы</a></nav>
+  <button class="btn btn-outline" id="topUpload"><span>＋</span> Фото / видео қосу</button>
+ </div></header>
+ <main id="home">
+  <section class="hero"><div class="hero-glow glow-one"></div><div class="hero-glow glow-two"></div><div class="hero-inner">
+   <div class="eyebrow"><span class="pulse"></span> ROLAB • ЕСТЕЛІКТЕР ГАЛЕРЕЯСЫ</div>
+   <h1>Әр сәт — <span>бір естелік.</span></h1>
+   <p class="hero-copy">ROLAB әлеміндегі ерекше сәттерді бірге сақтайық. Фотоларды тамашалаңыз, видеоларды көріңіз және өз естеліктеріңізбен бөлісіңіз.</p>
+   <div class="hero-buttons"><a class="btn btn-primary" href="#gallery">Галереяны көру <span>↗</span></a><button class="btn btn-secondary" id="heroUpload">＋ Өз файлыңды жүктеу</button></div>
+   <div class="stats"><div><b id="statAll">—</b><span>Барлық файл</span></div><div><b id="statPhotos">—</b><span>Фотосурет</span></div><div><b id="statVideos">—</b><span>Видео</span></div></div>
+  </div></section>
+  <section class="gallery-section" id="gallery"><div class="content-width">
+   <div class="section-kicker">БІЗДІҢ СӘТТЕР</div><div class="section-title-row"><div><h2>Медиа галерея <span class="purple-star">✳</span></h2><p>Барлық керемет сәттер бір жерде</p></div><button class="btn btn-outline small" id="galleryUpload">＋ Материал қосу</button></div>
+   <div class="toolbar"><div class="tabs" role="group" aria-label="Файл түрі"><button class="tab active" data-filter="all">Барлығы <span id="countAll">0</span></button><button class="tab" data-filter="image">📷 Фото <span id="countImages">0</span></button><button class="tab" data-filter="video">▶ Видео <span id="countVideos">0</span></button></div><div class="search"><span>⌕</span><input id="searchInput" placeholder="Файлды іздеу..." aria-label="Файлды іздеу" /></div></div>
+   <div id="notice" class="notice" hidden></div><div id="galleryGrid" class="gallery-grid"></div><div id="emptyState" class="empty-state" hidden><span>📷</span><h3>Әзірге ештеңе табылмады</h3><p>Іздеу сөзін өзгертіңіз немесе файл жүктеңіз.</p></div>
+   <div class="load-row"><button id="showMore" class="btn btn-outline" hidden>Тағы көрсету ↓</button></div>
+  </div></section>
+  <section class="share-section" id="about"><div class="share-card"><div class="share-icon">✦</div><div><h2>Сенің де керемет сәтің бар ма?</h2><p>Суретіңді немесе видеоңды ортақ галереяға қос. Естеліктеріміз бірге көбейсін!</p></div><button class="btn btn-light" id="bottomUpload">＋ Файл жүктеу</button></div></section>
+ </main>
+ <footer><div class="content-width foot-inner"><div class="footer-brand">RO<span>LAB</span> <small>MEDIA</small></div><p>Бірге жасалған ерекше сәттер ✦</p><span>© 2026 ROLAB</span></div></footer>
+ <dialog id="uploadDialog" class="modal"><form method="dialog"><button class="close" aria-label="Жабу">✕</button></form><div class="modal-body"><div class="modal-kicker">ГАЛЕРЕЯҒА ҚОСУ</div><h2>Естелікпен бөліс ✨</h2><p>Фото немесе видео таңдаңыз. Жүктелген файл барлық келушіге көрінеді.</p><label class="dropzone" id="dropZone"><input type="file" id="fileInput" accept="image/jpeg,image/png,image/webp,image/gif,video/mp4,video/webm,video/quicktime" multiple /><span class="drop-icon">☁</span><strong>Файлдарды осында апарыңыз</strong><small>немесе таңдау үшін басыңыз</small><em>JPG, PNG, WEBP, GIF, MP4, WEBM, MOV • 100 МБ дейін / файл</em></label><div id="fileSummary" class="file-summary" hidden></div><div id="uploadProgress" class="upload-progress" hidden><div id="progressBar"></div></div><div id="uploadStatus" class="upload-status" role="status"></div><button id="submitUpload" class="btn btn-primary submit" disabled>Галереяға жүктеу ↗</button></div></dialog>
+ <dialog id="viewerDialog" class="viewer"><button id="viewerClose" class="viewer-close" aria-label="Жабу">✕</button><div class="viewer-media" id="viewerMedia"></div><div class="viewer-info"><span id="viewerName"></span><a id="viewerDownload" target="_blank" rel="noopener" download>↓ Жүктеп алу</a></div><div class="viewer-arrows"><button id="viewerPrev" aria-label="Алдыңғы">‹</button><button id="viewerNext" aria-label="Келесі">›</button></div></dialog>
+ <script type="module" src="/src.js"></script>
+</body></html>
